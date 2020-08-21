@@ -1,21 +1,15 @@
-hourInfo = "Enter Hours you worked last two weeks:\n"
-payInfo = "Enter your pay rate:\n"
+def computepay(h,r):
+    h = float(h)
+    r = float(r)
+    if h > 40:
+        otHour = h - 40
+        otRate = r * 1.5
+        ot = otRate * otHour
+        totalPay = (h - otHour) * r + ot
+        print(ot)
+    return totalPay
 
-def computePay(x, y):
-    totalhour = input(x)
-    totalrate = input(y)
-
-    hour = float(totalhour)
-    rate = float(totalrate)
-
-    overtime = float(hour) - 40
-    if float(hour) > 40:
-        overtimeRate = float(rate) * 1.5
-        extraPay = overtime * overtimeRate
-        return extraPay
-        hour = float(hour) - overtime
-
-    pay = float(hour) * float(rate) + extraPay
-    print("Pay", pay)
-
-computePay(hourInfo, payInfo)
+hours = input("Enter Hours:")
+rate = input("Enter rate:")
+p = computepay(hours,rate)
+print("Pay",p)
