@@ -7,16 +7,13 @@ totalrate = input(payInfo)
 hour = float(totalhour)
 rate = float(totalrate)
 
-def computePay(hour, rate):
-    overtimeRate = float(rate) * 1.5
-    extraPay = overtime * overtimeRate
-    return extraPay
-
-
 try:
     if float(hour) > 40:
         overtime = float(hour) - 40
-        extraPay = computePay(hour, rate)
+        #print(overtime)
+        overtimeRate = float(rate) * 1.5
+        extraPay = overtime * overtimeRate
+        #print(extraPay)
         hour = float(hour) - overtime
 
     pay = float(hour) * float(rate) + extraPay
