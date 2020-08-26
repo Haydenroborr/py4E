@@ -1,7 +1,7 @@
 counter = 0
 fruit = "banana"
 index = -1
-let = ["b", "a", "n"]
+
 while counter < len(fruit):
     letter = fruit[index]
     print(letter)
@@ -22,9 +22,6 @@ def countv2(word, letter):
     num = word.count(letter)
     print('There is', num, letter, 'in', word + ".")
 
-for word in fruit:
-    countv2(fruit, let)
-
-# countv2(fruit, "b")
-# countv2(fruit, "a")
-# countv2(fruit, "n")
+countv2(fruit, "b")
+countv2(fruit, "a")
+countv2(fruit, "n")
