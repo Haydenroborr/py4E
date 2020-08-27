@@ -1,5 +1,9 @@
 fileName = input('Enter the file name: ')
-fileName = open(fileName)
+try:
+    fileName = open(fileName)
+except:
+    print('File cannot be opened:', fileName)
+    exit()
 count = 0
 for line in fileName:
     count = count + 1
